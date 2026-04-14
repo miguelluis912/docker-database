@@ -1,0 +1,18 @@
+# Variables sensibles
+.env
+
+# Datos de bases de datos (MUY IMPORTANTE)
+mysql_data/
+postgres_data/
+sqlserver_data/
+
+# Backups pesados o sensibles (opcional)
+backups/*.sql
+backups/*.dump
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Docker
+*.pid
