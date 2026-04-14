@@ -40,6 +40,11 @@ Generar en archivo ".env" para configurar las variables de entorno que configura
 cp .env.example .env
 ```
 
+##  Crear una red para comunicación entre contenedores
+Desde la carpeta o raiz del repositorio ejectar el siguiente comando.
+```bash
+docker network create database-network
+```
 
 ##  Levantar el contenedor
 Desde la carpeta o raiz del repositorio ejectar el siguiente comando.
@@ -47,7 +52,7 @@ Desde la carpeta o raiz del repositorio ejectar el siguiente comando.
 docker compose up -d
 ```
 
-##  Verificar funcionamiemto del  contenedor
+##  Verificar funcionamiento del  contenedor
 Desde la carpeta o raiz del repositorio ejectar el siguiente comando.
 ```bash
 docker compose ps
