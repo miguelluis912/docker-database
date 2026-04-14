@@ -14,7 +14,7 @@ services:
       - ./mysql_data:/var/lib/mysql
       - ./my.cnf:/etc/mysql/conf.d/my.cnf:ro
     networks:
-      - backend-rpi-network
+      - database-network
 
   postgres:
     image: postgres:15
@@ -28,7 +28,7 @@ services:
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
     networks:
-      - backend-rpi-network
+      - database-network
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -41,8 +41,8 @@ services:
     volumes:
       - ./sqlserver_data:/var/opt/mssql
     networks:
-      - backend-rpi-network
+      - database-network
 
 networks:
-  backend-rpi-network:
+  database-network:
     external: true
